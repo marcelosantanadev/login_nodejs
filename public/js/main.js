@@ -11,10 +11,10 @@ $(function () {
       NProgress.start();
 
       var config = {
-        headers: {
-          
-        },
-        route: 'http://api.intelitechnology.com.br/users'
+        route: 'http://api.intelitechnology.com.br/users',
+        data: {
+
+        }
       };
 
       $.postToServer(config, function (err, data) {

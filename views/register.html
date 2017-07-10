@@ -1,0 +1,26 @@
+{% extends 'templates/layout-generic.html' %}
+
+{% block content %}
+
+<div class="login-page">
+    <div class="form">
+        <form class="register-form">
+
+            <input type="text" name="name" placeholder="name"/>
+            <input type="text" name="lastname" placeholder="lastname"/>
+            <input type="text" name="email" placeholder="email"/>
+            <input type="text" name="phone" placeholder="phone"/>
+            <input type="password" name="password" placeholder="password"/>
+
+            <button id="registerSubmit">Criar conta</button>
+
+            <p class="message">Já está registrado? <a href="/login">Entrar</a></p>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block mainscript %}
+<script src="/js/register.js" type="text/javascript"></script>
+{% endblock %}

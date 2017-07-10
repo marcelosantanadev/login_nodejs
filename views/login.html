@@ -1,0 +1,24 @@
+{% extends 'templates/layout-generic.html' %}
+
+{% block content %}
+
+<div class="login-page">
+    <div class="form">
+        <form class="login-form">
+
+            <input type="text" name="email" value="" placeholder="Informe seu e-mail"/>
+            <input type="password" value="" placeholder="Sua senha" name="password"/>
+
+            <button id="loginSubmit" type="button">Entrar</button>
+
+            <p class="message">Não tem registro? <a href="/register">Criar uma conta</a></p>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block mainscript %}
+<script src="/js/login.js" type="text/javascript"></script>
+{% endblock %}
