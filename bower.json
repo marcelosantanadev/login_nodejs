@@ -1,0 +1,20 @@
+{
+  "name": "babynode",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Marcelo Santana <contato@marcelosantana.me>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/marcelosantanadev/login_nodejs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "nprogress": "^0.2.0"
+  }
+}
