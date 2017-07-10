@@ -9,29 +9,7 @@ exports.getLoginPage = function (req, res) {
   };
 
   res.render('login', context);
-};
-
-
-/**
- * Generate a salt for use with the BCrypt.encrypt() method.
- *
- * @param logRounds  The log2 of the number of rounds of hashing to apply - the work factor therefore increases as 2**logRounds.
- * @param random     An instance of SecureRandom to use.
- *
- * @return An encoded salt value.
- */
-
-function StringBuffer() {
-  this.__strings__ = new Array;
 }
-
-StringBuffer.prototype.append = function (str) {
-  this.__strings__.push(str);
-};
-
-StringBuffer.prototype.toString = function () {
-  return this.__strings__.join("");
-};
 
 // function gensalt() {
 //   var logRounds = 10;
