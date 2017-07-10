@@ -3,6 +3,8 @@ $(function () {
 
     var loginButton = $('#loginSubmit');
     var registerButton = $('#registerSubmit');
+    var loginField = $('#loginField');
+    var passwordField = $('#passwordField');
 
 
     registerButton.on('click', function () {
@@ -10,9 +12,9 @@ $(function () {
 
       var config = {
         headers: {
-          auth: ''
+          
         },
-        route: 'http://localhost:3335/users/register'
+        route: 'http://api.intelitechnology.com.br/users'
       };
 
       $.postToServer(config, function (err, data) {
@@ -28,9 +30,13 @@ $(function () {
 
       var config = {
         headers: {
-          auth: ''
+          "Content-Type": "application/x-www-form-urlencoded"
         },
-        route: 'http://localhost:3335/users/login'
+        data: {
+          "email":loginField,
+          "password": passwordField
+        },
+        route: 'http://api.intelitechnology.com.br/users/signin'
       };
 
       $.postToServer(config, function (err, data) {
