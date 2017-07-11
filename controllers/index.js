@@ -1,20 +1,16 @@
-var requestPromise = require('request-promise'),
-  bcrypt = require('bcrypt'),
-  bytearray = require('bytearray'),
-  secureRandom = require('secure-random');
+var requestPromise = require('request-promise');
 
-exports.getLoginPage = function (req, res) {
+
+exports.getIndexPage = function (req, res) {
   var context = {
-    title: 'Login'
+    title: 'Index'
   };
 
-  res.render('login', context);
+  res.render('index', context);
 };
 
-exports.postLoginPage = function (req, res) {
+exports.postIndexPage = function (req, res) {
   var body = req.body;
-  var salt = bcrypt.genSaltSync(10);
-  var passwordEncrypted = bcrypt(body.password);
 
   var opt = {
     method: 'POST',
