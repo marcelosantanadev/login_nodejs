@@ -13,13 +13,16 @@ exports.getLoginPage = function (req, res) {
 
 exports.postLoginPage = function (req, res) {
   var body = req.body;
-  var salt = bcrypt.genSaltSync(10);
-  var passwordEncrypted = bcrypt(body.password);
-
+  //var salt = bcrypt.genSaltSync(15);
+  //var passwordEncrypted = bcrypt(body.password);
+  //console.log(passwordEncrypted);
   var opt = {
     method: 'POST',
-    uri: 'http://api.intelitechnology.com.br/users/signin',
+    url: 'http://api.intelitechnology.com.br/users/signin',
     json: true,
+    header: {
+      "Content-Type" : "application/x-www-form-urlencoded",
+    },
     body: {
       email: body.email,
       password: body.password
